@@ -25,7 +25,17 @@
                 <a href="about.html">About</a>
             </li>
             <li>
-                <input type="text" placeholder="Search a Hobby">
+                <input type="text" id="myInput2" onkeyup="myFunc()" placeholder="Search a Hobby">
+                <ul id="myUL">
+                    <li><a href="coding.html">Coding</a></li>
+                    <li><a href="cooking.html">Cooking</a></li>
+                    <li><a href="dancing.html">Dancing</a></li>
+                    <li><a href="guitar.html">Guitar</a></li>
+                    <li><a href="hiking.html">Hiking</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="singing.html">Singing</a></li>
+                    <li><a href="travelling.html">Travelling</a></li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -50,16 +60,23 @@
                 <a href="about.html">About</a>
             </li>
             <li>
-                <div id="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
+                <div id="search-icon" class="dropdown">
+                    <i class="fas fa-search" onclick="myFunction()"></i>
+                    <div id="myDropdown" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                        <a href="coding.html">Coding</a>
+                        <a href="cooking.html">Cooking</a>
+                        <a href="dancing.html">Dancing</a>
+                        <a href="guitar.html">Guitar</a>
+                        <a href="hiking.html">Hiking</a>
+                        <a href="photography.html">Photography</a>
+                        <a href="singing.html">Singing</a>
+                        <a href="travelling.html">Travelling</a>
+                    </div>
+                  </div>
             </li>
         </ul>
     </nav>
-
-    <div id="searchbox">
-        <input type="text" placeholder="Search Here">
-    </div>
 
     <div id="banner">
         <h1>Glee</h1>

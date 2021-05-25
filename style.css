@@ -69,7 +69,33 @@ textarea:focus {
   font-size: 24px;
 }
 
-/* Search Box */
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 72px;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 5px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display:block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 
 #searchbox {
   position: fixed;
@@ -171,15 +197,15 @@ nav ul {
 
 #slideout-menu {
   display: none;
-  background: #2d3436;
+  background: #202125;
   z-index: 100;
-  position: fixed;
+  position:fixed;
   transition: 0.4s;
   margin-top: 72px;
   width: 100%;
   text-align: center;
   opacity:0;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 #slideout-menu ul {
@@ -197,6 +223,11 @@ nav ul {
   color: white;
 }
 
+#slideout-menu a:hover{
+  color: #f2687f;
+  text-decoration: none;
+}
+
 #slideout-menu input {
   width: 85%;
   padding: 8px;
@@ -204,6 +235,41 @@ nav ul {
   font-size: 20px;
   text-align: center;
 }
+
+#myInput2 {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  border-radius:20px;
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /*Add a border to all links*/
+  border-radius: 20px;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #202125; /* Grey background color */
+  padding: 10px; /* Add some padding */
+  text-decoration:none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: white; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+/* #myUL li a:hover:not(.header) { */
+  /* background-color: #f2687f; Add a hover effect to all links, except for headers */
+/* } */
 
 /* Sections */
 
